@@ -30,19 +30,24 @@ Leaf Nodes
 Subatask Nodes
 -----------
 - :doc:`subtask_ic120_navigate_anywhere <CustomNodes/SubtaskIc120NavigateAnywhere>`
+- :doc:`subtask_ic120_navigate_anywhere_deg <CustomNodes/SubtaskIc120NavigateAnywhereDeg>`
 - :doc:`subtask_ic120_follow_waypoints <CustomNodes/SubtaskIc120FollowWaypoints>`
+- :doc:`subtask_ic120_follow_waypoints_deg <CustomNodes/SubtaskIc120FollowWaypointsDeg>`
 - :doc:`subtask_ic120_navigate_through_poses <CustomNodes/SubtaskIc120NavigateThroughPoses>`
+- :doc:`subtask_ic120_navigate_through_poses_deg <CustomNodes/SubtaskIc120NavigateThroughPosesDeg>`
 - :doc:`subtask_ic120_release_soil <CustomNodes/SubtaskIc120ReleaseSoil>`
 - :doc:`subtask_zx200_change_pose <CustomNodes/SubtaskZx200ChangePose>`
 - :doc:`subtask_zx200_excavate_simple <CustomNodes/SubtaskZx200ExcavateSimple>`
 - :doc:`subtask_zx200_excavate_simple_plan <CustomNodes/SubtaskZx200ExcavateSimplePlan>`
 - :doc:`subtask_zx200_release_simple <CustomNodes/SubtaskZx200ReleaseSimple>`
 - :doc:`subtask_zx200_navigate_anywhere <CustomNodes/SubtaskZx200NavigateAnywhere>`
+- :doc:`subtask_zx200_navigate_anywhere_deg <CustomNodes/SubtaskZx200NavigateAnywhereDeg>`
 - :doc:`subtask_zx200_follow_waypoints <CustomNodes/SubtaskZx200FollowWaypoints>`
-- 
+- :doc:`subtask_zx200_follow_waypoints_deg <CustomNodes/SubtaskZx200FollowWaypointsDeg>`
 - :doc:`subtask_mst110cr_navigate_anywhere <CustomNodes/SubtaskMst110crNavigateAnywhere>`
-- :doc:`subtask_mst110cr_follow_waypoints <CustomNodes/SubtaskMst110crFollowWaypoints>`
+- :doc:`subtask_mst110cr_navigate_anywhere_deg <CustomNodes/SubtaskMst110crNavigateAnywhereDeg>`
 - :doc:`subtask_mst110cr_navigate_through_poses <CustomNodes/SubtaskMst110crNavigateThroughPoses>`
+- :doc:`subtask_mst110cr_navigate_through_poses_deg <CustomNodes/SubtaskMst110crNavigateThroughPosesDeg>`
 - :doc:`subtask_mst110cr_release_soil <CustomNodes/SubtaskMst110crReleaseSoil>`
 
 
@@ -56,7 +61,6 @@ Other Custom Nodes
 - :doc:`MongoValueWriter <CustomNodes/MongoValueWriter>`
 - :doc:`SetLocalBlackboard <CustomNodes/SetLocalBlackboard>`
 - :doc:`KeepRunningUntilFlgup <CustomNodes/KeepRunningUntilFlgup>`
-- 
 
 
 

@@ -25,14 +25,12 @@ OperaSim-PhysXでは以下に示すいくつかのサンプルタスクが用意
 
 
 これらのタスクはデータベース上の~/rostmsdb/task以下に格納されている。
-また、xml形式のタスク列については`こちら <https://github.com/irvs/ros2_tms_for_construction/tree/develop/ts/tms_ts/tms_ts_manager/config/official_registred_tasks>`_ 
+また、xml形式のタスク列については `こちら <https://github.com/irvs/ros2_tms_for_construction/tree/develop/ts/tms_ts/tms_ts_manager/config/official_registred_tasks>`_ 
 に置いてある。
 
 これらのタスクは操作する建設機械によって起動する手順が異なるため、項目を分けて説明する。
-なお、以下を実行する前に必ず`こちら <https://github.com/pwri-opera/OperaSim-PhysX>`_の手順にしたがって
-OperaSim-PhysXとUbuntu22.04 PC間の接続ができていることを確認しておく。
-
-なお、こちらに示す手順にしたがって、既存のサンプルタスクをもとに別のタスクを構築したり、タスクを実行している様子を可視化することが可能です。
+なお、以下を実行する前に必ず `こちら <https://github.com/pwri-opera/OperaSim-PhysX>`_ の手順にしたがって
+OperaSim-PhysXとUbuntu22.04 PC間の接続ができていることを確認しておく必要があります。
 
 
 - **タスク1,2,3の実行**
@@ -106,5 +104,7 @@ OperaSim-PhysXとUbuntu22.04 PC間の接続ができていることを確認し�
   ※ <task_id>には6,7のどちらかの値を指定してください
 
   //タスク6,7の実行結果の様子をここに貼り付け
+
+上記のサンプルサブタスクは :doc:`こちら <TaskManagementMechanism>` に示す手順にしたがって、既存のサンプルタスクをもとに別のタスクを構築したり、タスクを実行している様子を可視化することが可能です。
 
 
