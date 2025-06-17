@@ -2,12 +2,14 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'ROS2-TMS for Construction'
+copyright = 'Kurazume lab'
+author = 'Kurazume lab'
 
-release = '0.1'
-version = '0.1.0'
+html_logo = "images/lab_logo.png" 
+
+release = 'latest'
+version = 'latest'
 
 # -- General configuration
 

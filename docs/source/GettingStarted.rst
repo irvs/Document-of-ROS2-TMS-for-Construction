@@ -17,191 +17,94 @@ OperaSim-PhysX上の建設機械を実際に動作させるまでの流れを説
 
 .. _sample-task-execusion:
 
-サンプルタスクを実行
+チュートリアル
 ===================================
 
-1. 以下のコマンドを実行し、MongoDBを起動する。::
-   
-      sudo systemctl start mongod
-   
-2. 以下のコマンドを実行し、MongoDB Compassを起動する。::
-   
-      mongodb-compass
-   
-3. ポップアップするMongodbの画面にて、URIで"mongodb://localhost:27017/"と指定されていることを確認し、"Connect"ボタンをクリックすると表示される画面にて、rostmsdbをクリックして以下の画面が開けばデータベースの設定が完了している。
-   なお、データの個数などはここでは気にせず、単にrostmsdbデータベース下のコレクションが画像のものと同様に生成されていれば問題ない。
-
-   .. image:: images/db_setup.png
-      :alt: db_setup
-      :width: 400px
-      :align: center  
-
-   .. raw:: html
-
-      <br><br>
-   
-   もしデータベースが上記の表示にならない場合、データベースの構築ができておらず、このままでは正常にタスクを起動できない。
-   この場合には以下のコマンドを実行する。::
-       
-      cd ~/ros2-tms-for-construction_ws/src/ros2_tms_for_construction/demo
-      unzip rostmsdb_collections.zip
-      mongorestore dump
-
-4. データベースが正常に構築できていることを確認したら以下のコマンドを実行し、タスク管理機構を起動する。::
-
-      cd ~/ros2-tms-for-construction_ws
-      source install/setup.bash
-      ros2 launch tms_ts_launch tms_ts_construction.launch.py task_id:=[タスクID]
-    
-    
-    すると以下に示すGUIボタンが表示される。GUIボタンには2種類のボタンが搭載されており、緑の部分をクリックするとサンプルタスクが実行される。また、赤色の領域をクリックするとタスク実行を緊急停止させることができる。
+本章ではタスク管理機構を使用してOperaSim-PhysX上の建設機械を操作する流れを説明する。
+OperaSim-PhysXでは以下に示すいくつかのサンプルタスクが用意されている。
 
 
-   .. image:: images/gui_button.png
-    :alt: gui_button
-    :width: 300px
-    :align: center  
+これらのタスクはデータベース上の~/rostmsdb/task以下に格納されている。
+また、xml形式のタスク列については`こちら <https://github.com/irvs/ros2_tms_for_construction/tree/develop/ts/tms_ts/tms_ts_manager/config/official_registred_tasks>`_ 
+に置いてある。
 
-   .. raw:: html
+これらのタスクは操作する建設機械によって起動する手順が異なるため、項目を分けて説明する。
+なお、以下を実行する前に必ず`こちら <https://github.com/pwri-opera/OperaSim-PhysX>`_の手順にしたがって
+OperaSim-PhysXとUbuntu22.04 PC間の接続ができていることを確認しておく。
 
-      <br><br>
-   
-
-    なお、データベースに格納されているサンプルタスクの概要は以下に示すとおりである。
-
-タスクの可視化
-===================================
-    
-BehaviorTree.CPPではGrootと呼ばれるGUIアプリケーションが存在する。Grootの機能は以下に示すとおりである。
-
-- **Editor** : タスクを設計・編集する機能
-- **Monitor** : 実行中のタスクを可視化する機能
-
-本章では、Grootを使用したタスクの可視化について紹介する。実行手順は以下に示すとおりである。
-
-1. Behavior Treeがタスクを実行している間、Grootと呼ばれるアプリケーションを使用してタスクが実行されていく様子を可視化することができる。GrootはROS2上で実装されており、以下のコマンドで起動することができる。::
-
-      cd ~/ros2-tms-for-construction_ws
-      ros2 run groot Groot
-
-.. note::
-
-   Monitor機能はBehavior Treeがタスクを実行している間のみ実行可能です。
-
-2. Grootを起動すると、以下の画面が表示される。可視化機能の起動には"Monitor"と記載されている部分をクリックする。
-   
-     
-  .. image:: images/groot_menu.png
-   :alt: groot_menu
-   :width: 300px
-   :align: center  
-
-.. raw:: html
-
-   <br><br>
-
-3. すると以下の画面が表示されるので、以下に示すとおりIPアドレスとポートを指定し、"Connect"ボタンをクリックする。
-
-   - Sensing IP : localhost
-   - Publisher Port : 1666
-   - Server Port : 1667
-
-  .. image:: images/groot_monitor_menu.png
-   :alt: groot_monitor_menu
-   :width: 300px
-   :align: center  
-
-.. raw:: html
-
-   <br><br>
-   
-.. note::
-
-   Publisher Port, Server Portの値は起動するtms_ts_managerによって異なるため注意してください。サンプルタスクの場合、`こちら <https://github.com/irvs/ros2_tms_for_construction/blob/main/tms_ts/tms_ts_manager/src/task_schedular_manager.cpp#L74>`_
-   の部分でPublisher PortとServer Portを指定しています。
-
-4. すると以下に示すとおり、実行中のタスクの様子が可視化される。緑色は実行後、橙色は実行中、青色は未実行を示す。
-
-.. note::
-
-   タスクが可視化されず、以下のポップアップウィンドウが表示される場合がある。これはBehavior Treeがタスクを実行されていない若しくは実行終了していた場合に表示される。
-   このような場合、`こちら <sample-task-execusion_>`_ の手順にしたがって再度タスクを実行し、必ずBehavior Treeがタスクを実行している間に"Connect"ボタンを押してください。
-
-     .. image:: images/groot_monitoring_warn.png
-      :alt: groot_monitoring_warn
-      :width: 300px
-      :align: center  
-
-   .. raw:: html
+なお、こちらに示す手順にしたがって、既存のサンプルタスクをもとに別のタスクを構築したり、タスクを実行している様子を可視化することが可能です。
 
 
-タスクの作成
-===================================
+- **タスク1,2,3の実行**
+  
+  このタスクはナビゲーションやマニピュレーションを使用せず、直接シミュレータに関節角度
+  を送ることで建設機械を操作する。具体的な実行手順は以下のとおりである。
 
-本章では、Grootを使用したタスク作成の手順について説明する。
+  1つめのターミナル::
 
-1. 以下のコマンドを実行し、Grootを起動する。::
+    cd ~/ros2-tms-for-construction_ws && source install/setup.bash
+    ros2 launch ros_tcp_endpoint endpoint.py
 
-      cd ~/ros2-tms-for-construction_ws
-      ros2 run groot Groot
+  2つめのターミナル::
 
-2. Grootを起動すると、以下の画面が表示される。可視化機能の起動には"Monitor"と記載されている部分をクリックする。
- 
-  .. image:: images/groot_menu.png
-   :alt: groot_menu
-   :width: 300px
-   :align: center  
+    cd ~/ros2-tms-for-construction_ws && source install/setup.bash
+    ros2 launch tms_ts_launch tms_ts_construction.launch.py task_id:=<task_id>    
 
-.. raw:: html
+  ※ <task_id>には4,5のどちらかの値を指定してください
 
-3. そして表示された画面上で以下の手順でカスタムノードの追加を行う。ここでいうカスタムノードとはROS2-TMS for Construction
-   で独自に用意したBehavior Treeノード(以降、BTノードと呼ぶ)のことを指す。
+  // タスク1,2,3の実行結果の動画をここに貼り付け
 
-     .. image:: images/groot_add_custom_nodes.png
-      :alt: groot_add_custom_nodes
-      :width: 300px
-      :align: center  
+- **タスク４,5の実行**
+  
+  バックホウZX200のマニピュレーション操作を含むタスクである。このため、自律化施工基盤OPERA
+  のzx200_ros2を起動する必要がある。具体的には以下の順にコマンドを実行してください。
 
-   .. raw:: html
+  1つめのターミナル::
 
-   すると、以下に示すように新たに複数のノードが追加される。
+    cd ~/ros2-tms-for-construction_ws && source install/setup.bash
+    ros2 launch ros_tcp_endpoint endpoint.py
 
-     .. image:: images/custom_nodes.png
-      :alt: custom_nodes
-      :width: 300px
-      :align: center  
+  2つめのターミナル::
 
-   .. raw:: html
+    cd ~/ros2-tms-for-construction_ws && source install/setup.bash
+    ros2 launch zx200_bringup vehicle.launch.py command_interface_name:=velocity use_rviz:=true
 
-4. この状態で任意のタスクを構築していく。なお、Leaf Nodeの概要はこちらに、その他のカスタムノード及びBehavior Treeの標準ノードの
-概要はこちらで説明したとおりである。これらのノードをもとにタスクを構築する。タスクの例を以下に示す。
+  3つめのターミナル::
 
-     .. image:: images/sample_task.png
-      :alt: sample_task
-      :width: 300px
-      :align: center  
+    cd ~/ros2-tms-for-construction_ws && source install/setup.bash
+    ros2 launch tms_if_for_opera tms_if_for_opera.launch.py
+  
+  4つめのターミナル::
 
-   .. raw:: html
+    cd ~/ros2-tms-for-construction_ws && source install/setup.bash
+    ros2 launch tms_ts_launch tms_ts_construction.launch.py task_id:=<task_id>
+  
+  ※ <task_id>には4,5のどちらかの値を指定してください
 
-.. note::
+  //タスク4,5の実行結果の様子をここに貼り付け
 
-   タスクを構築する際には、タスクを構成するSubtask Nodeで使用するパラメータデータをデータベースのrostmsdbデータベース parameterコレクション下
-   に置いておく必要があります。データベースの仕様及びLeaf Nodeで指定するパラメータの仕様についてはこちらをご覧ください。
+- **タスク6,7の実行**
+  
+  クローラダンプIC120のナビゲーション操作を含むタスクである。このため、自律化施工基盤OPERA
+  のic120_ros2を起動する必要がある。具体的には以下の順にコマンドを実行してください
 
-5. Groot上でタスクを作成したあとは以下の手順に沿って、src/ros2_tms_for_construction/tms_ts/tms_ts_manager/configディレクトリ下にタスク列のxmlファイル
-を出力します。
+  1つめのターミナル::
 
-     .. image:: images/save_task.png
-      :alt: save_task
-      :width: 300px
-      :align: center  
+    cd ~/ros2-tms-for-construction_ws && source install/setup.bash
+    ros2 launch ros_tcp_endpoint endpoint.py
 
-   .. raw:: html
+  2つめのターミナル::
 
-6. xml形式のタスク列を出力した後は、以下のコマンドを実行しデータベース上にタスクデータとして登録します。::
-      
-      cd ~/ros2-tms-for-construction_ws
-      colcon build --packages-select tms_ts_manager
-      ros2 run tms_ts_manager task_generator.py --ros-args -p bt_tree_xml_file_name:=[configディレクトリ以下のパス]
-7. するとデータベース上のrostmsdbデータベースのtaskコレクション上に新たなタスクデータが作成され、`こちら <sample-task-execusion_>`_ の手順にそってBehavior Treeから実行できるようになります。
+    cd ~/ros2-tms-for-construction_ws && source install/setup.bash
+    ros2 launch ic120_unity ic120_standby_ekf.launch.py
+
+  3つめのターミナル::
+
+    cd ~/ros2-tms-for-construction_ws && source install/setup.bash
+    ros2 launch tms_ts_launch tms_ts_construction.launch.py task_id:=<task_id>
+
+  ※ <task_id>には6,7のどちらかの値を指定してください
+
+  //タスク6,7の実行結果の様子をここに貼り付け
+
 
