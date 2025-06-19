@@ -27,6 +27,34 @@ ROS2-TMS for Constructionは九州大学 倉爪研究室で開発が進められ
 本研究の一部はJST【ムーンショット型研究開発事業】グラント番号【JPMJMS2032】及び内閣府総合科学技術・イノベーション会議の戦略的イノベーション創造プログラム（SIP) 
 第３期「 スマートインフラマネジメントシステムの構築 」JPJ012187（研究推進法人: 土木研究所）の資金提供を受け、実施されました。
 
+実装背景
+--------------------------------------
+現在、土木研究所は建設機械の自動化に用いる信号の共通規格化を推進しており、この原案を”  `共通制御信号 <https://www.pwri.go.jp/team/advanced/pdf/seigyosingou.pdf>`_ ”と呼びます。
+共通制御信号は単なる信号案であり、これを実装した機体と、その自動化に必要となるアプリケーションがなければ建設機械の自律化はできません。
+そこで、土木研究所は共通制御信号の実証プラットフォームとして  `自律化施工基盤 <https://www.pwri.go.jp/team/advanced/opera.html>`_ を実装しました。
+自律化施工基盤OPERAには以下に示すとおり、建設機械の実機・シミュレータからナビゲーション・マニピュレーションといったアプリケーションまでが実装され、GitHub上で一般公開されています。
+( OPERA's Scopeの赤枠内部が自律化施工基盤OPERAの実装範囲です )
+
+.. image:: images/OPERA_architecture.png
+   :alt: OPERAのアーキテクチャ
+   :width: 400px
+   :align: center  
+  
+.. raw:: html
+
+   <br><br>
+
+その一方で、自律化施工基盤OPERAのみでは自律化施工を実現することはできません。
+ナビゲーションやアプリケーションというのは目標となる位置姿勢を与えて初めて自律動作するものです。
+自律化施工というのは「現場の状況を逐次把握しつつ、状況に応じた動作指令を建設機械へと送る機能」が必要であり、これを担うのが状態機械や行動木といったタスクスケジューラです。
+したがって、我々は自律化施工を実現するため、自律化施工基盤OPERAの上にタスクスケジューリング機能を実装した本システム「ROS2-TMS for Construction」を実装しました。
+
+.. image:: images/scope_of_ros2-tms_for_const.png
+   :alt: ROS2-TMS for Constructionのスコープ
+   :width: 600px
+   :align: center  
+  
+.. raw:: html
 
 アーキテクチャ
 --------------------------------------
@@ -61,10 +89,7 @@ ROS2-TMS for Constructionでは以下に示す通り、各々の機能ごとに�
   TMS_TSからの指令をもとに建設機械の動作計画を行うモジュール
 - **Robot Controller Module (TMS_RC) [OPERA]** : 
   
-  TMS_RPからの指令をもとに建設機械への入力信号を計算するモジュール
-- **Sensing Processing Module (TMS_SP)** : 
-  
-  センシング処理した値を受け取り、TMS_DBへ送るモジュール
+  TMS_RPからの指令をもとに建設機械への入力信号を計算するモジュール  なお、タスクの全体像は以下に示すとおりである。
 - **Sensor Driver Module (TMS_SD)** :
   
   センサからの値を受け取り、そのままTMS_DBへ送るモジュール
@@ -82,14 +107,14 @@ ROS2-TMS for Constructionでは以下に示す通り、各々の機能ごとに�
   工事現場から得られる情報をもとにサイバー空間上にリアルタイムな工事現場を構築する機能
 
 
-なお、ROS2-TMS for Constructionから操作可能な建設機械には以下のものが存在します。
+.. なお、ROS2-TMS for Constructionから操作可能な建設機械には以下のものが存在します。
 
-.. image:: images/OPERA_machinaries.svg
-   :alt: OPERA対応建設機械
-   :width: 600px
-   :align: center  
+.. .. image:: images/OPERA_machinaries.svg
+..    :alt: OPERA対応建設機械
+..    :width: 600px
+..    :align: center  
   
-.. raw:: html
+.. .. raw:: html
 
    <br><br>
 
@@ -242,6 +267,15 @@ ROS2-TMS for Constructionでは以下に示す通り、各々の機能ごとに�
           booktitle = {ロボティクス・メカトロニクス講演会(ROBOMECH)},
           year      = {2025},
         }     
+
+
+報道発表
+--------------------------------------
+
+1. 日刊工業新聞, `油圧ショベル自動化 清水建など実証 <https://www.nikkan.co.jp/articles/view/00751041>`_, 2025.6.6
+2. 日刊建設工業新聞,  `清水建設ら/油圧ショベルの掘削〜積載をシームレスに自動化、土研の技術基盤活用 <https://nikkankensetsukogyo2.blogspot.com/2025/06/blog-post_88.html>`_, 2025.6.6
+3. 建設通信新聞, 土砂掘削・積載を自動化/ 「OPERA」の有効性確認, 2025.6.6
+4. 清水建設 ニュースリリース,   `油圧ショベルによる土砂掘削・ダンプ積載作業を自動化 ～土木研究所の自動施工技術基盤「OPERA」の有効性を確認～ <https://www.shimz.co.jp/company/about/news-release/2025/2025011.html>`_, 2025.6.6
 
 
 Contents

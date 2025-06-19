@@ -3,7 +3,7 @@
 
 タスク管理機構とはOPERAと連携し、Behavior Treeを使用してユーザから与えられたタスク（施工シナリオ）をもとに建設機械を操作するための仕組みである。
 タスク管理機構では、データベースに格納された情報を任意のタイミング読み出してきて、これらの値をもとに動作する。このため、以下のデータを事前にデータベースに格納しておく必要がある。
-データベースの仕様についてはこちらに記載したとおりである。
+データベースの仕様については :doc:`こちら <DataBase>` に記載したとおりである。
 
 - **タスクデータ** : 
   
@@ -49,7 +49,9 @@
 タスク管理機構の使用方法
 ===================================
 
-サンプルタスクを実行
+.. _task-execusion:
+
+タスク実行
 -----------------------------------
 
 1. 以下のコマンドを実行し、MongoDBを起動する。::
@@ -79,14 +81,14 @@
       unzip rostmsdb_collections.zip
       mongorestore dump
 
-4. データベースが正常に構築できていることを確認したら以下のコマンドを実行し、タスク管理機構を起動する。::
+4. データベースが正常に構築できていることを確認したら以下のコマンドを実行し、タスク管理機構を起動する。なお、タスクIDはデータベースの~/rostmsdb/task以下に格納してある所望のタスクデータのものを指定する。::
 
       cd ~/ros2-tms-for-construction_ws
       source install/setup.bash
       ros2 launch tms_ts_launch tms_ts_construction.launch.py task_id:=[タスクID]
     
     
-    すると以下に示すGUIボタンが表示される。GUIボタンには2種類のボタンが搭載されており、緑の部分をクリックするとサンプルタスクが実行される。また、赤色の領域をクリックするとタスク実行を緊急停止させることができる。
+    すると以下に示すGUIボタンが表示される。GUIボタンには2種類のボタンが搭載されており、緑の部分をクリックするとサンプルタスクが実行される。また、赤色の領域をクリックすると実行中のタスクを緊急停止させることができる。
 
 
    .. image:: images/gui_button.png
@@ -97,9 +99,11 @@
    .. raw:: html
 
       <br><br>
-   
 
-    なお、データベースに格納されているサンプルタスクの概要は以下に示すとおりである。
+.. note::
+   
+   なお、現在のタスク管理機構は連続したタスク実行に対応していない。このため、一度タスクを実行したあとは再度launch.pyファイルを立ち上げ直す必要がある。
+   
 
 タスクの可視化
 -----------------------------------
@@ -149,15 +153,24 @@ BehaviorTree.CPPではGrootと呼ばれるGUIアプリケーションが存在�
    
 .. note::
 
-   Publisher Port, Server Portの値は起動するtms_ts_managerによって異なるため注意してください。サンプルタスクの場合、`こちら <https://github.com/irvs/ros2_tms_for_construction/blob/main/tms_ts/tms_ts_manager/src/task_schedular_manager.cpp#L74>`_
-   の部分でPublisher PortとServer Portを指定しています。
+   Publisher Port, Server Portの値は起動するtms_ts_managerによって異なるため注意してください。tms_ts_construction.launch.pyでタスクを実行した場合、`こちら <https://github.com/irvs/ros2_tms_for_construction/blob/main/tms_ts/tms_ts_manager/src/task_schedular_manager.cpp#L74>`_
+   の部分でPublisher PortとServer Portを指定しており、上記のSensing IP, Publisher Port, Server PortでGrootとBehavior Treeを接続可能です。
 
-4. すると以下に示すとおり、実行中のタスクの様子が可視化される。緑色は実行後、橙色は実行中、青色は未実行を示す。
+4. すると以下に示すとおり、実行中のタスクの様子が可視化される。緑色は実行後、橙色は実行中、青色は未実行を示す。(画像のツリーはサンプルタスク(task_id: 1)のものです)
+
+  .. image:: images/monitering_task.png
+   :alt: groot_monitor_menu
+   :width: 600px
+   :align: center  
+
+.. raw:: html
+
+   <br><br>
 
 .. note::
 
    タスクが可視化されず、以下のポップアップウィンドウが表示される場合がある。これはBehavior Treeがタスクを実行されていない若しくは実行終了していた場合に表示される。
-   このような場合、`こちら <sample-task-execusion_>`_ の手順にしたがって再度タスクを実行し、必ずBehavior Treeがタスクを実行している間に"Connect"ボタンを押してください。
+   このような場合、 `こちら <task-execusion_>`_  の手順にしたがって再度タスクを実行し、必ずBehavior Treeがタスクを実行している間に"Connect"ボタンを押してください。
 
      .. image:: images/groot_monitoring_warn.png
       :alt: groot_monitoring_warn
@@ -166,6 +179,7 @@ BehaviorTree.CPPではGrootと呼ばれるGUIアプリケーションが存在�
 
    .. raw:: html
 
+.. _task-creation:
 
 タスクの作成
 -----------------------------------
@@ -177,7 +191,7 @@ BehaviorTree.CPPではGrootと呼ばれるGUIアプリケーションが存在�
       cd ~/ros2-tms-for-construction_ws
       ros2 run groot Groot
 
-2. Grootを起動すると、以下の画面が表示される。可視化機能の起動には"Monitor"と記載されている部分をクリックする。
+2. Grootを起動すると、以下の画面が表示される。タスク作成機能の起動には"Editor"と記載されている部分をクリックする。
  
   .. image:: images/groot_menu.png
    :alt: groot_menu
@@ -191,7 +205,7 @@ BehaviorTree.CPPではGrootと呼ばれるGUIアプリケーションが存在�
 
      .. image:: images/groot_add_custom_nodes.png
       :alt: groot_add_custom_nodes
-      :width: 300px
+      :width: 500px
       :align: center  
 
    .. raw:: html
@@ -200,27 +214,24 @@ BehaviorTree.CPPではGrootと呼ばれるGUIアプリケーションが存在�
 
      .. image:: images/custom_nodes.png
       :alt: custom_nodes
-      :width: 300px
+      :width: 500px
       :align: center  
 
    .. raw:: html
 
 4. この状態で任意のタスクを構築していく。なお、Leaf Nodeの概要はこちらに、その他のカスタムノード及びBehavior Treeの標準ノードの
-概要はこちらで説明したとおりである。これらのノードをもとにタスクを構築する。タスクの例を以下に示す。
+   概要は :doc:`こちら <CustomNodes>` で説明したとおりである。Behavior Treeではこれらのノードを木構造に接続することでタスクを構築する。作成したタスクの例を以下に示す。
 
      .. image:: images/sample_task.png
       :alt: sample_task
-      :width: 300px
-      :align: center  
-
    .. raw:: html
 
 .. note::
 
-   タスクを構築する際には、タスクを構成するSubtask Nodeで使用するパラメータデータをデータベースのrostmsdbデータベース parameterコレクション下
+   タスクを構築する際には、タスクを構成するSubtask Nodeで使用するパラメータデータをデータベースの~/rostmsdb/parameter下
    に置いておく必要があります。データベースの仕様及びLeaf Nodeで指定するパラメータの仕様についてはこちらをご覧ください。
 
-5. Groot上でタスクを作成したあとは以下の手順に沿って、src/ros2_tms_for_construction/tms_ts/tms_ts_manager/configディレクトリ下にタスク列のxmlファイル
+1. Groot上でタスクを作成したあとは以下の手順に沿って、src/ros2_tms_for_construction/tms_ts/tms_ts_manager/configディレクトリ下にタスク列のxmlファイル
 を出力します。
 
      .. image:: images/save_task.png
@@ -230,11 +241,12 @@ BehaviorTree.CPPではGrootと呼ばれるGUIアプリケーションが存在�
 
    .. raw:: html
 
-6. xml形式のタスク列を出力した後は、以下のコマンドを実行しデータベース上にタスクデータとして登録します。::
+1. xml形式のタスク列を出力した後は、以下のコマンドを実行しデータベース上にタスクデータとして登録します。::
       
       cd ~/ros2-tms-for-construction_ws
       colcon build --packages-select tms_ts_manager
       ros2 run tms_ts_manager task_generator.py --ros-args -p bt_tree_xml_file_name:=[configディレクトリ以下のパス]
-7. するとデータベース上のrostmsdbデータベースのtaskコレクション上に新たなタスクデータが作成され、`こちら <sample-task-execusion_>`_ の手順にそってBehavior Treeから実行できるようになります。
+
+2. するとデータベース上の~/rostmsdb/task下に新たなタスクデータが作成され、 `こちら <task-execusion_>`_  の手順にそってBehavior Treeから実行できるようになります。
 
 
