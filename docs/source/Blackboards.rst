@@ -50,13 +50,13 @@ Local Blackboard上に保管した値は必要に応じてTask 2内のノード�
    今回のサンプルタスクの実装にあたっては以下を用意しました。
 
    .. image:: images/global_blackboard_imp.png
-   :alt: Global Blackboardの実装例
-   :width: 800px
-   :align: center  
+      :alt: Global Blackboardの実装例
+      :width: 800px
+      :align: center  
   
-.. raw:: html
+   .. raw:: html
 
-   <br><br>
+      <br><br>
 
 2. 次に、Global Blackboardに対応したタスク実装を行います。今回は以下の2つのタスクをサンプルタスクとして実装しました。
 
@@ -67,13 +67,13 @@ Local Blackboard上に保管した値は必要に応じてTask 2内のノード�
    実際にノードの実行前後では以下のようにGlobal Blackboard上の値が変化します。
 
    .. image:: images/MongoValueWriter_imp.png
-   :alt: MongoVFalueWriterの実装例
-   :width: 800px
-   :align: center  
+      :alt: MongoVFalueWriterの実装例
+      :width: 500px
+      :align: center  
   
-.. raw:: html
+   .. raw:: html
 
-   <br><br>
+      <br><br>
 
    また、Global Blackboardからの値の読み出しを行うのはタスク6の以下のノードです。
    BlackboadrValueReaderMongoにはmonogo_param_name, mongo_record_name, output_portの3種類のポートが存在し、
@@ -83,11 +83,13 @@ Local Blackboard上に保管した値は必要に応じてTask 2内のノード�
    その流れを以下に示します。
 
    .. image:: images/MongoValueWriter_imp.png
-   :alt: MongoVFalueWriterの実装例
-   :width: 800px
-   :align: center  
+      :alt: MongoVFalueWriterの実装例
+      :width: 500px
+      :align: center  
   
-.. raw:: html
+   .. raw:: html
+
+      <br><br>
 
 3. そして2つのタスクを同時に実行します。サンプルタスクの場合、以下の手順で2種類のタスクを同時に実行することが可能です。::
    

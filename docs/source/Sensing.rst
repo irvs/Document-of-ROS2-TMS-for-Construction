@@ -6,9 +6,9 @@ ROS2-TMS for Cinstructionのタスク管理機構では、外部のセンシン�
 その概要図を以下に示します。
 
     .. image:: images/system_architecture.png
-    :alt: システムの全体像
-    :width: 300px
-    :align: center  
+      :alt: システムの全体像
+      :width: 600px
+      :align: center  
 
     .. raw:: html
 
@@ -53,9 +53,9 @@ TMS_SPは「センシングシステム及びROS2-TMS for Costruction間通信�
 3. そしてMongoDB Compassを起動し、~/rostmsdb/parameter下の以下のデータを確認すると、値が更新されていく様子が確認できます。
    
     .. image:: images/dynamic_parameters_imp.png
-    :alt: 動的パラメータが更新されていく様子の可視化
-    :width: 300px
-    :align: center  
+       :alt: 動的パラメータが更新されていく様子の可視化
+       :width: 600px
+       :align: center  
 
     .. raw:: html
 
