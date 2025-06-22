@@ -45,7 +45,7 @@ subtask_ic120_follow_waypoints_degと機能は同じであるが、姿勢はquat
    :width: 300px
    :align: center  
 
-※_id, model_name. description, record_name等の共通仕様は除外
+※_id, model_name. description, record_name等の共通仕様は除外。詳しくは :doc:`こちら <../DataBase>` へ。
 
 サンプル
 -----------
@@ -54,5 +54,5 @@ subtask_ic120_follow_waypoints_degと機能は同じであるが、姿勢はquat
 
 .. image:: ../images/Sample_SubtaskIc120NavigateAnywhere.svg
    :alt: Sample_SubtaskIc120NavigateAnywhere
-   :width: 400px
+   :width: 600px
    :align: center  

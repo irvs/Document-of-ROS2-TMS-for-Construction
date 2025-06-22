@@ -50,7 +50,7 @@ subtask_ic120_navigate_through_posesと機能は同じであるが、姿勢はde
    :width: 300px
    :align: center  
 
-※_id, model_name. description, record_name等の共通仕様は除外
+※_id, model_name. description, record_name等の共通仕様は除外。詳しくは :doc:`こちら <../DataBase>` へ。
 
 サンプル
 -----------
@@ -59,5 +59,5 @@ subtask_ic120_navigate_through_posesと機能は同じであるが、姿勢はde
 
 .. image:: ../images/Sample_SubtaskIc120NavigateThroughPosesDeg.svg
    :alt: Sample_SubtaskIc120NavigateThroughPosesDeg
-   :width: 400px
+   :width: 600px
    :align: center  

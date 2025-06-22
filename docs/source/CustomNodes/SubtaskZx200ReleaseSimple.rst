@@ -46,7 +46,7 @@ subtask_zx200_release_simple
    :width: 300px
    :align: center  
 
-※_id, model_name. description, record_name等の共通仕様は除外
+※_id, model_name. description, record_name等の共通仕様は除外。詳しくは :doc:`こちら <../DataBase>` へ。
 
 サンプル
 -----------
@@ -55,5 +55,5 @@ subtask_zx200_release_simple
 
 .. image:: ../images/Sample_SubtaskZx200ReleaseSimple.svg
    :alt: Sample_SubtaskZx200ReleaseSimple
-   :width: 400px
+   :width: 600px
    :align: center  

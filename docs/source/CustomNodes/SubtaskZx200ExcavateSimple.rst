@@ -46,7 +46,7 @@ subtask_zx200_excavate_simple
    :width: 300px
    :align: center  
 
-※_id, model_name. description, record_name等の共通仕様は除外
+※_id, model_name. description, record_name等の共通仕様は除外。詳しくは :doc:`こちら <../DataBase>` へ。
 
 サンプル
 -----------
@@ -55,5 +55,5 @@ subtask_zx200_excavate_simple
 
 .. image:: ../images/Sample_SubtaskZx200ExcavateSimple.svg
    :alt: Sample_SubtaskZx200ExcavateSimple
-   :width: 400px
+   :width: 600px
    :align: center  

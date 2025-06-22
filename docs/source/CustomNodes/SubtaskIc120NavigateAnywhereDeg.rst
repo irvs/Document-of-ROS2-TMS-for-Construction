@@ -47,7 +47,7 @@ Map座標基準での目標位置姿勢を指定する。
    :width: 300px
    :align: center  
 
-※_id, model_name. description, record_name等の共通仕様は除外
+※_id, model_name. description, record_name等の共通仕様は除外。詳しくは :doc:`こちら <../DataBase>` へ。
 
 サンプル
 -----------
@@ -56,5 +56,5 @@ Map座標基準での目標位置姿勢を指定する。
 
 .. image:: ../images/Sample_SubtaskIc120NavigateAnywhereDeg.svg
    :alt: Sample_SubtaskIc120NavigateAnywhereDeg
-   :width: 400px
+   :width: 600px
    :align: center  

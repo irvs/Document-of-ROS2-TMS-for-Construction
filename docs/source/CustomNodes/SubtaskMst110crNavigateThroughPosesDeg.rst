@@ -49,7 +49,7 @@ subtask_mst110cr_navigate_through_posesと機能は同じであるが、姿勢�
    :width: 300px
    :align: center  
 
-※_id, model_name. description, record_name等の共通仕様は除外
+※_id, model_name. description, record_name等の共通仕様は除外。詳しくは :doc:`こちら <../DataBase>` へ。
 
 サンプル
 -----------
@@ -58,5 +58,5 @@ subtask_mst110cr_navigate_through_posesと機能は同じであるが、姿勢�
 
 .. image:: ../images/Sample_SubtaskMst110crNavigateThroughPosesDeg.svg
    :alt: Sample_SubtaskMst110crNavigateThroughPosesDeg
-   :width: 400px
+   :width: 600px
    :align: center  

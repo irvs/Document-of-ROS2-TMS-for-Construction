@@ -48,7 +48,7 @@ OperaSim-PhysX/AGX及び実機に対応。
    :width: 300px
    :align: center  
 
-※_id, model_name. description, record_name等の共通仕様は除外
+※_id, model_name. description, record_name等の共通仕様は除外。詳しくは :doc:`こちら <../DataBase>` へ。
 
 サンプル
 -----------
@@ -57,5 +57,5 @@ OperaSim-PhysX/AGX及び実機に対応。
 
 .. image:: ../images/Sample_SubtaskMst110crNavigateAnywhere.svg
    :alt: Sample_SubtaskMst110crNavigateAnywhere
-   :width: 400px
+   :width: 600px
    :align: center  
