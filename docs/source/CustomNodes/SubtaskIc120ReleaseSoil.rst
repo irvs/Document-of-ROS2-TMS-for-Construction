@@ -42,8 +42,12 @@ Map座標基準での目標位置姿勢を指定
 
 .. image:: ../images/DB_SubtaskReleaseSoil.png
    :alt: DB_SubtaskReleaseSoil
-   :width: 300px
+   :width: 400px
    :align: center  
+
+.. raw:: html
+
+   <br><br>
 
 ※_id, model_name. description, record_name等の共通仕様は除外。詳しくは :doc:`こちら <../DataBase>` へ。
 

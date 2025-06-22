@@ -42,8 +42,12 @@ subtask_ic120_follow_waypoints_degと機能は同じであるが、姿勢はquat
 
 .. image:: ../images/DB_SubtaskFollowWaypoints.png
    :alt: DB_SubtaskFollowWaypoints
-   :width: 300px
+   :width: 400px
    :align: center  
+
+.. raw:: html
+
+   <br><br>
 
 ※_id, model_name. description, record_name等の共通仕様は除外。詳しくは :doc:`こちら <../DataBase>` へ。
 

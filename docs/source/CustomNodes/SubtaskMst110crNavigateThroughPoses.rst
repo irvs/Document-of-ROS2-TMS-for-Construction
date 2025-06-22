@@ -47,8 +47,12 @@ subtask_mst110cr_navigate_through_poses_degと機能は同じであるが、姿�
 
 .. image:: ../images/DB_SubtaskNavigateThroughPoses.png
    :alt: DB_SubtaskNavigateThroughPoses
-   :width: 300px
-   :align: center  
+   :width: 400px
+   :align: center
+
+.. raw:: html
+
+   <br><br>  
 
 ※_id, model_name. description, record_name等の共通仕様は除外。詳しくは :doc:`こちら <../DataBase>` へ。
 

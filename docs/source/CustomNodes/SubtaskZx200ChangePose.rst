@@ -43,8 +43,12 @@ ZX200を構成する各関節の角度をラジアン指定。
 
 .. image:: ../images/DB_SubtaskChangePose.png
    :alt: DB_SubtaskChangePose
-   :width: 300px
-   :align: center  
+   :width: 400px
+   :align: center
+
+.. raw:: html
+
+   <br><br>  
 
 ※_id, model_name. description, record_name等の共通仕様は除外。詳しくは :doc:`こちら <../DataBase>` へ。
 

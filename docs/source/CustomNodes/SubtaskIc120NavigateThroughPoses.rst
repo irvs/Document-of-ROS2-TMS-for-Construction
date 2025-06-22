@@ -28,7 +28,7 @@ subtask_ic120_navigate_through_poses_degと機能は同じであるが、姿勢�
 - **record_name** : 接続するSubtask Nodeの仕様に合わせたパラメータデータのrecord_nameの値を指定
 - **subtask_node** :  "subtask_ic120_nvigate_through_poses"と指定。
 
-.. image:: ../images/SubtaskIc120NavigateTheoughPoses.png
+.. image:: ../images/SubtaskIc120NavigateThroughPoses.png
    :alt: SubtaskIc120NavigateTheoughPoses
    :width: 400px
    :align: center  
@@ -47,8 +47,12 @@ subtask_ic120_navigate_through_poses_degと機能は同じであるが、姿勢�
 
 .. image:: ../images/DB_SubtaskNavigateThroughPoses.png
    :alt: DB_SubtaskNavigateThroughPoses
-   :width: 300px
+   :width: 400px
    :align: center  
+
+.. raw:: html
+
+   <br><br>
 
 ※_id, model_name. description, record_name等の共通仕様は除外。詳しくは :doc:`こちら <../DataBase>` へ。
 

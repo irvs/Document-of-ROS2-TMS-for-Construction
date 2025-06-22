@@ -51,8 +51,12 @@ Behavior Tree側で判断できない。このため、動作計画用のSubtask
 
 .. image:: ../images/DB_ExcavateSimplePlan.png
    :alt: DB_SubtaskExcavateSimplePlan
-   :width: 300px
-   :align: center  
+   :width: 400px
+   :align: center
+
+.. raw:: html
+
+   <br><br>  
 
 ※_id, model_name. description, record_name等の共通仕様は除外。詳しくは :doc:`こちら <../DataBase>` へ。
 
