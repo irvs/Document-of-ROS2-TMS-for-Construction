@@ -58,7 +58,7 @@ subtask_mst110cr_follow_waypointsと機能は同じであるが、姿勢はdegre
 
 **動作** : Map座標基準のx軸方向1m, 2m, 3m地点を経由して移動。各地点ではbase_linkとmapの姿勢を合わせる。
 
-.. image:: ../images/Sample_SubtaskMst110crNavigateAnywhereDeg.svg
+.. image:: ../images/Sample_SubtaskMst110crFollowWaypointsDeg.svg
    :alt: Sample_SubtaskMst110crNavigateAnywhereDeg
    :width: 00px
    :align: center  

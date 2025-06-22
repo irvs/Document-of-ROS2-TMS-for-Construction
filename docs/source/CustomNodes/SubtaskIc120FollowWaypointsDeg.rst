@@ -56,7 +56,7 @@ subtask_ic120_follow_waypointsと機能は同じであるが、姿勢はdegree�
 
 **動作** : Map座標基準のx軸方向1m, 2m, 3m地点を経由して移動。各地点ではbase_linkとmapの姿勢を合わせる。
 
-.. image:: ../images/Sample_SubtaskIc120NavigateAnywhereDeg.svg
+.. image:: ../images/Sample_SubtaskIc120FollowWaypointsDeg.svg
    :alt: Sample_SubtaskIc120NavigateAnywhereDeg
    :width: 600px
    :align: center  

@@ -8,7 +8,8 @@
 Leaf Node・Subtask Node
 ====================================
 
-建設機械を動作させる目的で使用するノードがLeaf NodeとSubtask Nodeであり、大まかな関係は以下に示すとおりです。
+建設機械を動作させる目的で使用するノードがLeaf NodeとSubtask Nodeであり、Behavior Treeの末端に位置するノードです、
+これらのノードの主な関係は以下に示すとおりです。
 
      .. image:: images/LeafNode_and_SubtaskNode.png
       :alt: custom_nodes

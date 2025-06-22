@@ -4,7 +4,6 @@ LeafNodeMst110cr
 概要
 -----------
 共通制御信号対応クローラダンプMST110CRを操作するSubtask Nodeを接続するLeaf Node。
-OperaSim-PhysX/AGX及び実機に対応。
 
 .. image:: ../images/LeafNodeMst110cr.png
    :alt: LeafNodeMst110cr

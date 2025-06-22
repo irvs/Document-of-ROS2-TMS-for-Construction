@@ -4,7 +4,6 @@ LeafNodeIc120
 概要
 -----------
 共通制御信号対応クローラダンプIC120を操作するSubtask Nodeを接続するLeaf Node。
-OperaSim-PhysX/AGX及び実機に対応。
 
 .. image:: ../images/LeafNodeIc120.png
    :alt: LeafNodeIc120

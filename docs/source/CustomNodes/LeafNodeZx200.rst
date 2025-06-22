@@ -4,7 +4,6 @@ LeafNodeZx200
 概要
 -----------
 共通制御信号対応バックホウZX200を操作するSubtask Nodeを接続するLeaf Node。
-OperaSim-PhysX/AGX及び実機に対応。
 
 .. image:: ../images/LeafNodeZx200.png
    :alt: LeafNodeZx200

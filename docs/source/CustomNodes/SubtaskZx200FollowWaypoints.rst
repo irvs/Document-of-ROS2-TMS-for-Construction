@@ -58,7 +58,7 @@ subtask_zx200_follow_waypoints_degと機能は同じであるが、姿勢はquat
 
 **動作** : Map座標基準のx軸方向1m, 2m, 3m地点を経由して移動。各地点ではbase_linkとmapの姿勢を合わせる。
 
-.. image:: ../images/Sample_SubtaskZx200NavigateAnywhere.svg
-   :alt: Sample_SubtaskZx200NavigateAnywhere
+.. image:: ../images/Sample_SubtaskZx200FollowWaypoints.svg
+   :alt: Sample_SubtaskZx200FollowWaypoints
    :width: 600px
    :align: center  
