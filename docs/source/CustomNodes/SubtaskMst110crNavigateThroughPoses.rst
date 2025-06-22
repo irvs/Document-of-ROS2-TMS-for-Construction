@@ -7,7 +7,9 @@ subtask_mst110cr_follow_waypointsの概要
 ダンプの移動経路をNavigate Through Posesに従って指定する。
 Navigate Through Posesではsubtask_mst110cr_follow_waypoints同様に
 経路上の複数点に沿ったナビゲーションを行うものの、経路上の経由地点では位置合わせのみを
-行う。本ノードはOperaSim-PhysX/AGX及び実機に対応。
+行う。
+subtask_mst110cr_navigate_through_poses_degと機能は同じであるが、姿勢はquaternionを用いて指定する点が異なる。
+本ノードはOperaSim-PhysX/AGX及び実機に対応。
 
 使用方法
 -----------
@@ -29,7 +31,8 @@ Navigate Through Posesではsubtask_mst110cr_follow_waypoints同様に
 パラメータデータの仕様
 -----------
 
-各配列の要素番号NはN個目のウェイポイントの値として指定
+各配列の要素番号NはN個目のウェイポイントの値として指定する。
+姿勢はmap座標からみたbase_link座標の相対位置姿勢であり、位置はxyzのm基準、姿勢はquaternionで指定する。
 
 .. image:: ../images/DB_SubtaskNavigateThroughPoses.png
    :alt: DB_SubtaskNavigateThroughPoses

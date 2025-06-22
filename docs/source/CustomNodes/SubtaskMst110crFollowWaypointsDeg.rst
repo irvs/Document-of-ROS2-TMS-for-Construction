@@ -5,6 +5,7 @@ subtask_mst110cr_follow_waypoints_degの概要
 -----------
 共通制御信号対応クローラダンプMST110CRをナビゲーション操作するSubtask Nodeの1つ。
 ダンプの移動経路をWaypointsを使用して指定し、それに沿ってナビゲーションを行う。
+subtask_mst110cr_follow_waypointsと機能は同じであるが、姿勢はdegreeを用いて指定する点が異なる。
 OperaSim-PhysX/AGX及び実機に対応。
 
 使用方法
@@ -27,7 +28,8 @@ OperaSim-PhysX/AGX及び実機に対応。
 パラメータデータの仕様
 -----------
 
-各配列の要素番号NはN個目のウェイポイントの値として指定
+各配列の要素番号NはN個目のウェイポイントの値として指定する。
+姿勢はmap座標からみたbase_link座標の相対位置姿勢であり、位置はxyzのm基準、姿勢はdegreeで指定する。
 
 .. image:: ../images/DB_SubtaskFollowWaypointsDeg.png
    :alt: DB_SubtaskFollowWaypointsDeg

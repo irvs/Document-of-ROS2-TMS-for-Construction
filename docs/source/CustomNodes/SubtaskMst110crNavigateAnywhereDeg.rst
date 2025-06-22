@@ -5,6 +5,7 @@ subtask_mst110cr_navigate_anywhere_degの概要
 -----------
 共通制御信号対応クローラダンプMST110CRをナビゲーション操作するSubtask Nodeの1つ。
 ダンプの目標位置姿勢を指定し、それに向かってナビゲーションを行う。
+subtask_mst110cr_navigate_anywhereと機能は同じであるが、姿勢はdegreeを用いて指定する点が異なる。
 OperaSim-PhysX/AGX及び実機に対応。
 
 使用方法
@@ -27,7 +28,8 @@ OperaSim-PhysX/AGX及び実機に対応。
 パラメータデータの仕様
 -----------
 
-Map座標基準での目標位置姿勢を指定
+Map座標基準での目標位置姿勢を指定する。
+姿勢はmap座標からみたbase_link座標の相対位置姿勢であり、位置はxyzのm基準、姿勢はdegreeで指定する。
 
 .. image:: ../images/DB_SubtaskNavigateAnywhereDeg.png
    :alt: DB_SubtaskNavigateAnywhereDeg
