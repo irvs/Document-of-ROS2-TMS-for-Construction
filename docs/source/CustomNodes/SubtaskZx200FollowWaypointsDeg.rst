@@ -1,4 +1,4 @@
-subtask_zx200_follow_waypoints_degの概要
+subtask_zx200_follow_waypoints_deg
 ===================================
 
 概要
@@ -6,7 +6,18 @@ subtask_zx200_follow_waypoints_degの概要
 共通制御信号対応バックホウZX200をナビゲーション操作するSubtask Nodeの1つ。
 ダンプの移動経路をWaypointsを使用して指定し、それに沿ってナビゲーションを行う。
 subtask_zx200_follow_waypointsと機能は同じであるが、姿勢はdegreeを用いて指定する点が異なる。
-OperaSim-PhysX/AGX及び実機に対応。
+
+対応表
+-----------
+
+.. image:: ../images/対応表_simok_actok.png
+   :alt: 対応表
+   :width: 800px
+   :align: center  
+
+.. raw:: html
+
+   <br><br>
 
 使用方法
 -----------

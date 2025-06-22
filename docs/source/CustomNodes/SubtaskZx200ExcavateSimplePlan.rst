@@ -1,4 +1,4 @@
-subtask_zx200_excavate_simple_planの概要
+subtask_zx200_excavate_simple_plan
 ===================================
 
 概要
@@ -14,7 +14,18 @@ Behavior Tree側で判断できない。このため、動作計画用のSubtask
 のいずれかの状態信号がBehavior Treeに返却される。また、もし動作計画に成功した場合には
 その値をロックし、外部からの値の更新を受け付けないようにする。
 
-OperaSim-PhysX/AGX及び実機に対応。
+対応表
+-----------
+
+.. image:: ../images/対応表_simok_actok.png
+   :alt: 対応表
+   :width: 800px
+   :align: center  
+
+.. raw:: html
+
+   <br><br>
+
 
 使用方法
 -----------

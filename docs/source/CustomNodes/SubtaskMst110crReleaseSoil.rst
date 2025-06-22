@@ -1,11 +1,23 @@
-subtask_mst110cr_release_soilの概要
+subtask_mst110cr_release_soil
 ===================================
 
 概要
 -----------
 共通制御信号対応クローラダンプMST110CRを操作するSubtask Nodeの1つ。
 ベッセルの目標放土角度を指定し、放土動作を行う。
-現在は実機にのみ対応。
+
+対応表
+-----------
+
+.. image:: ../images/対応表_simnotok_actok.png
+   :alt: 対応表
+   :width: 800px
+   :align: center  
+
+.. raw:: html
+
+   <br><br>
+
 
 使用方法
 -----------

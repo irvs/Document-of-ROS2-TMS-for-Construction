@@ -1,11 +1,23 @@
-subtask_zx200_change_poseの概要
+subtask_zx200_change_pose
 ===================================
 
 概要
 -----------
 共通制御信号対応バックホウZX200をマニピュレーション操作するSubtask Nodeの1つ。
 バックホウの目標姿勢を指定し、現在姿勢からマニピュレーション操作を行う。
-OperaSim-PhysX/AGX及び実機に対応。
+
+対応表
+-----------
+
+.. image:: ../images/対応表_simok_actok.png
+   :alt: 対応表
+   :width: 800px
+   :align: center  
+
+.. raw:: html
+
+   <br><br>
+
 
 使用方法
 -----------

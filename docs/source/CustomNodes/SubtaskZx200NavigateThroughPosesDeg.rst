@@ -1,4 +1,4 @@
-subtask_zx200_follow_waypoints_degの概要
+subtask_zx200_follow_waypoints_deg
 ===================================
 
 概要
@@ -9,7 +9,18 @@ Navigate Through Posesではsubtask_zx200_follow_waypoints同様に
 経路上の複数点に沿ったナビゲーションを行うものの、経路上の経由地点では位置合わせのみを
 行う。
 subtask_zx200_navigate_through_posesと機能は同じであるが、姿勢はdegreeを用いて指定する点が異なる。
-本ノードはOperaSim-PhysX/AGX及び実機に対応。
+
+対応表
+-----------
+
+.. image:: ../images/対応表_simok_actok.png
+   :alt: 対応表
+   :width: 800px
+   :align: center  
+
+.. raw:: html
+
+   <br><br>
 
 使用方法
 -----------

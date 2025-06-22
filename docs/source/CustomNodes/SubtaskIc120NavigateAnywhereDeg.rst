@@ -1,4 +1,4 @@
-subtask_ic120_navigate_anywhere_degの概要
+subtask_ic120_navigate_anywhere_deg
 ===================================
 
 概要
@@ -6,7 +6,18 @@ subtask_ic120_navigate_anywhere_degの概要
 共通制御信号対応クローラダンプIC120をナビゲーション操作するSubtask Nodeの1つ。
 ダンプの目標位置姿勢を指定し、それに向かってナビゲーションを行う。
 subtask_ic120_navigate_anywhereと機能は同じであるが、姿勢はquaternionを用いて指定する点が異なる。
-OperaSim-PhysX/AGX及び実機に対応。
+
+対応表
+-----------
+
+.. image:: ../images/対応表_simok_actok.png
+   :alt: 対応表
+   :width: 800px
+   :align: center  
+
+.. raw:: html
+
+   <br><br>
 
 使用方法
 -----------

@@ -127,57 +127,59 @@ BehaviorTree.CPPではGrootと呼ばれるGUIアプリケーションが存在�
 2. Grootを起動すると、以下の画面が表示されます。可視化機能の起動には"Monitor"と記載されている部分をクリックします。
    
      
-  .. image:: images/groot_menu.png
-   :alt: groot_menu
-   :width: 300px
-   :align: center  
+   .. image:: images/groot_menu.png
+    :alt: groot_menu
+    :width: 300px
+    :align: center  
 
-.. raw:: html
+   .. raw:: html
 
-   <br><br>
+      <br><br>
 
-3. すると以下の画面が表示されるので、以下に示すとおりIPアドレスとポートを指定し、"Connect"ボタンをクリックします。
+1. すると以下の画面が表示されるので、以下に示すとおりIPアドレスとポートを指定し、"Connect"ボタンをクリックします。
 
    - Sensing IP : localhost
    - Publisher Port : 1666
    - Server Port : 1667
 
-  .. image:: images/groot_monitor_menu.png
-   :alt: groot_monitor_menu
-   :width: 300px
-   :align: center  
+   .. image:: images/groot_monitor_menu.png
+    :alt: groot_monitor_menu
+    :width: 300px
+    :align: center  
 
-.. raw:: html
+   .. raw:: html
 
-   <br><br>
+      <br><br>
    
 .. note::
 
    Publisher Port, Server Portの値は起動するtms_ts_managerによって異なるため注意してください。tms_ts_construction.launch.pyでタスクを実行した場合、`こちら <https://github.com/irvs/ros2_tms_for_construction/blob/main/tms_ts/tms_ts_manager/src/task_schedular_manager.cpp#L74>`_
    の部分でPublisher PortとServer Portを指定しており、上記のSensing IP, Publisher Port, Server PortでGrootとBehavior Treeを接続可能です。
 
-4. すると以下に示すとおり、実行中のタスクの様子が可視化されます。緑色は実行後、橙色は実行中、青色は未実行を示しています。(画像のツリーはサンプルタスク(task_id: 1)のものです)
+1. すると以下に示すとおり、実行中のタスクの様子が可視化されます。緑色は実行後、橙色は実行中、青色は未実行を示しています。(画像のツリーはサンプルタスク(task_id: 1)のものです)
 
-  .. image:: images/monitering_task.png
-   :alt: groot_monitor_menu
-   :width: 600px
-   :align: center  
+   .. image:: images/monitering_task.png 
+    :alt: groot_monitor_menu
+    :width: 600px
+    :align: center  
 
-.. raw:: html
+   .. raw:: html
 
-   <br><br>
+      <br><br>
 
 .. note::
 
    タスクが可視化されず、以下のポップアップウィンドウが表示される場合があります。これはBehavior Treeがタスクを実行されていない若しくは実行終了していることを示しています。
    このような場合、 `こちら <task-execusion_>`_  の手順にしたがって再度タスクを実行し、必ずBehavior Treeがタスクを実行している間に"Connect"ボタンを押してください。
 
-     .. image:: images/groot_monitoring_warn.png
-      :alt: groot_monitoring_warn
-      :width: 300px
-      :align: center  
+   .. image:: images/groot_monitoring_warn.png
+    :alt: groot_monitoring_warn
+    :width: 300px
+    :align: center  
 
    .. raw:: html
+
+      <br><br>
 
 .. _task-creation:
 
@@ -198,33 +200,44 @@ BehaviorTree.CPPではGrootと呼ばれるGUIアプリケーションが存在�
    :width: 300px
    :align: center  
 
-.. raw:: html
+  .. raw:: html
 
-3. そして表示された画面上で以下の手順でカスタムノードを追加します。ここでいうカスタムノードとはROS2-TMS for Construction
+     <br><br>
+
+1. そして表示された画面上で以下の手順でカスタムノードを追加します。ここでいうカスタムノードとはROS2-TMS for Construction
    で独自に用意したBehavior Treeノード(以降、BTノードと呼ぶ)のことを指しています。
 
-     .. image:: images/groot_add_custom_nodes.png
-      :alt: groot_add_custom_nodes
-      :width: 500px
-      :align: center  
+   .. image:: images/groot_add_custom_nodes.png
+    :alt: groot_add_custom_nodes
+    :width: 500px
+    :align: center  
 
    .. raw:: html
+   
+     <br><br>
 
    すると、以下に示すように新たに複数のノードが追加される。
 
-     .. image:: images/custom_nodes.png
-      :alt: custom_nodes
-      :width: 500px
-      :align: center  
+   .. image:: images/custom_nodes.png
+    :alt: custom_nodes
+    :width: 500px
+    :align: center  
 
    .. raw:: html
 
-4. この状態で任意のタスクを構築しています。なお、Leaf Nodeの概要はこちらに、その他のカスタムノード及びBehavior Treeの標準ノードの
+      <br><br>
+
+2. この状態で任意のタスクを構築しています。なお、Leaf Nodeの概要はこちらに、その他のカスタムノード及びBehavior Treeの標準ノードの
    概要は :doc:`こちら <CustomNodes>` で説明したとおりです。Behavior Treeではこれらのノードを木構造に接続することでタスクを構築します。作成したタスクの例は以下のとおりです。
 
-     .. image:: images/sample_task.png
-      :alt: sample_task
+   .. image:: images/sample_task.png
+    :alt: sample_task
+    :width: 500px
+    :align: center  
+
    .. raw:: html
+   
+      <br><br>
 
 .. note::
 
@@ -240,6 +253,8 @@ BehaviorTree.CPPではGrootと呼ばれるGUIアプリケーションが存在�
       :align: center  
 
    .. raw:: html
+
+      <br><br>
 
 1. xml形式のタスク列を出力した後は、以下のコマンドを実行しデータベース上にタスクデータとして登録します。::
       

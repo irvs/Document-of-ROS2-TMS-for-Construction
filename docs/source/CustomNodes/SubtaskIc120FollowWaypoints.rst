@@ -1,4 +1,4 @@
-subtask_ic120_follow_waypointsの概要
+subtask_ic120_follow_waypoints
 ===================================
 
 概要
@@ -6,7 +6,18 @@ subtask_ic120_follow_waypointsの概要
 共通制御信号対応クローラダンプIC120をナビゲーション操作するSubtask Nodeの1つ。
 ダンプの移動経路をWaypointsを使用して指定し、それに沿ってナビゲーションを行う。
 subtask_ic120_follow_waypoints_degと機能は同じであるが、姿勢はquaternionを用いて指定する点が異なる。
-OperaSim-PhysX/AGX及び実機に対応。
+
+対応表
+-----------
+
+.. image:: ../images/対応表_simok_actok.png
+   :alt: 対応表
+   :width: 800px
+   :align: center  
+
+.. raw:: html
+
+   <br><br>
 
 使用方法
 -----------
@@ -19,8 +30,6 @@ OperaSim-PhysX/AGX及び実機に対応。
    :width: 400px
    :align: center  
   
-.. raw:: html
-
 .. raw:: html
 
    <br><br>

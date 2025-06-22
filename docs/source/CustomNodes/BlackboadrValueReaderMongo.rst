@@ -16,12 +16,11 @@ MongoDB上のGlobal Blackboardから値を読み出してきて、Local Blackboa
    :alt: SubtaskIc120FollowWaypoints
    :width: 400px
    :align: center  
-  
-.. raw:: html
 
 .. raw:: html
 
    <br><br>
+
 
 パラメータデータの仕様
 -----------
