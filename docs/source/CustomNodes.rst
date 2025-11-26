@@ -16,7 +16,6 @@ Leaf Node・Subtask Node
       :width: 500px
       :align: center  
 
-   .. raw:: html
 
 1. Leaf Nodeにはmodel_name・record_name・subtask_nodeという3種類の入力ポートが存在します。このうち、model_nameとrecord_nameでデータベース上のパラメータデータを指定します。
 2. Leaf NodeはROS2 Actionを介してsubtask_nameで指定したSubtask Nodeへと接続します。
@@ -37,33 +36,34 @@ Leaf Node・Subtask Node
 
 Leaf Nodes
 -----------
-- :doc:`LeafNodeIc120 <CustomNodes/LeafNodeIc120>`
-- :doc:`LeafNodeZx200 <CustomNodes/LeafNodeZx200>`
-- :doc:`LeafNodeMst110cr <CustomNodes/LeafNodeMst110cr>`
+.. toctree::
+   :maxdepth: 1
+
+   CustomNodes/LeafNodeIc120
+   CustomNodes/LeafNodeZx200
+   CustomNodes/LeafNodeMst110cr
 
 
 Subatask Nodes
------------
-- :doc:`subtask_ic120_navigate_anywhere <CustomNodes/SubtaskIc120NavigateAnywhere>`
-- :doc:`subtask_ic120_navigate_anywhere_deg <CustomNodes/SubtaskIc120NavigateAnywhereDeg>`
-- :doc:`subtask_ic120_follow_waypoints <CustomNodes/SubtaskIc120FollowWaypoints>`
-- :doc:`subtask_ic120_follow_waypoints_deg <CustomNodes/SubtaskIc120FollowWaypointsDeg>`
-- :doc:`subtask_ic120_navigate_through_poses <CustomNodes/SubtaskIc120NavigateThroughPoses>`
-- :doc:`subtask_ic120_navigate_through_poses_deg <CustomNodes/SubtaskIc120NavigateThroughPosesDeg>`
-- :doc:`subtask_ic120_release_soil <CustomNodes/SubtaskIc120ReleaseSoil>`
-- :doc:`subtask_zx200_change_pose <CustomNodes/SubtaskZx200ChangePose>`
-- :doc:`subtask_zx200_excavate_simple <CustomNodes/SubtaskZx200ExcavateSimple>`
-- :doc:`subtask_zx200_excavate_simple_plan <CustomNodes/SubtaskZx200ExcavateSimplePlan>`
-- :doc:`subtask_zx200_release_simple <CustomNodes/SubtaskZx200ReleaseSimple>`
-- :doc:`subtask_zx200_navigate_anywhere <CustomNodes/SubtaskZx200NavigateAnywhere>`
-- :doc:`subtask_zx200_navigate_anywhere_deg <CustomNodes/SubtaskZx200NavigateAnywhereDeg>`
-- :doc:`subtask_zx200_follow_waypoints <CustomNodes/SubtaskZx200FollowWaypoints>`
-- :doc:`subtask_zx200_follow_waypoints_deg <CustomNodes/SubtaskZx200FollowWaypointsDeg>`
-- :doc:`subtask_mst110cr_navigate_anywhere <CustomNodes/SubtaskMst110crNavigateAnywhere>`
-- :doc:`subtask_mst110cr_navigate_anywhere_deg <CustomNodes/SubtaskMst110crNavigateAnywhereDeg>`
-- :doc:`subtask_mst110cr_navigate_through_poses <CustomNodes/SubtaskMst110crNavigateThroughPoses>`
-- :doc:`subtask_mst110cr_navigate_through_poses_deg <CustomNodes/SubtaskMst110crNavigateThroughPosesDeg>`
-- :doc:`subtask_mst110cr_release_soil <CustomNodes/SubtaskMst110crReleaseSoil>`
+----------------
+.. toctree::
+   :maxdepth: 1
+
+   CustomNodes/SubtaskIc120NavigateAnywhere
+   CustomNodes/SubtaskIc120FollowWaypoints
+   CustomNodes/SubtaskIc120NavigateThroughPoses
+   CustomNodes/SubtaskIc120ReleaseSoil
+   CustomNodes/SubtaskZx200ChangePose
+   CustomNodes/SubtaskZx200ExcavateSimple
+   CustomNodes/SubtaskZx200ExcavateSimplePlan
+   CustomNodes/SubtaskZx200ReleaseSimple
+   CustomNodes/SubtaskZx200NavigateAnywhere
+   CustomNodes/SubtaskZx200FollowWaypoints
+   CustomNodes/SubtaskZx200NavigateThroughPoses
+   CustomNodes/SubtaskMst110crNavigateAnywhere
+   CustomNodes/SubtaskMst110crFollowWaypoints
+   CustomNodes/SubtaskMst110crNavigateThroughPoses
+   CustomNodes/SubtaskMst110crReleaseSoil
 
 
 
@@ -74,14 +74,14 @@ Other Custom Nodes
 Other Custom Nodesには以下のBTノードが存在します。
 これらのノードはLeaf Node・Subtask Node等の末端のノードの実行順序を決定したり、Blackboardへの値の読み書きを行うノードが含まれています。
 
+.. toctree::
+   :maxdepth: 1
 
-Other Custom Nodes
------------
-- :doc:`BlackboadrValueReaderMongo <CustomNodes/BlackboadrValueReaderMongo>`
-- :doc:`ConditionalExpression <CustomNodes/ConditionalExpression>`
-- :doc:`MongoValueWriter <CustomNodes/MongoValueWriter>`
-- :doc:`SetLocalBlackboard <CustomNodes/SetLocalBlackboard>`
-- :doc:`KeepRunningUntilFlgup <CustomNodes/KeepRunningUntilFlgup>`
+   CustomNodes/BlackboadrValueReaderMongo
+   CustomNodes/ConditionalExpression
+   CustomNodes/MongoValueWriter
+   CustomNodes/SetLocalBlackboard
+   CustomNodes/KeepRunningUntilFlgup
 
 
 

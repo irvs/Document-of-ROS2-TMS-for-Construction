@@ -14,9 +14,6 @@ subtask_ic120_release_soil
    :width: 800px
    :align: center  
 
-.. raw:: html
-
-   <br><br>
 
 使用方法
 -----------
@@ -29,14 +26,9 @@ subtask_ic120_release_soil
    :width: 400px
    :align: center  
   
-.. raw:: html
-
-.. raw:: html
-
-   <br><br>
 
 パラメータデータの仕様
------------
+------------------------
 
 Map座標基準での目標位置姿勢を指定
 
@@ -45,9 +37,6 @@ Map座標基準での目標位置姿勢を指定
    :width: 400px
    :align: center  
 
-.. raw:: html
-
-   <br><br>
 
 ※_id, model_name. description, record_name等の共通仕様は除外。詳しくは :doc:`こちら <../DataBase>` へ。
 

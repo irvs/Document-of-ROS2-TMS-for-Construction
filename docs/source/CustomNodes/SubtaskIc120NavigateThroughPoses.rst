@@ -18,9 +18,6 @@ subtask_ic120_navigate_through_poses_degと機能は同じであるが、姿勢�
    :width: 800px
    :align: center  
 
-.. raw:: html
-
-   <br><br>
 
 使用方法
 -----------
@@ -32,15 +29,10 @@ subtask_ic120_navigate_through_poses_degと機能は同じであるが、姿勢�
    :alt: SubtaskIc120NavigateTheoughPoses
    :width: 400px
    :align: center  
-  
-.. raw:: html
-
-.. raw:: html
-
-   <br><br>
+   
 
 パラメータデータの仕様
------------
+------------------------
 
 各配列の要素番号NはN個目のウェイポイントの値として指定する。
 姿勢はmap座標からみたbase_link座標の相対位置姿勢であり、位置はxyzのm基準、姿勢はquaternionで指定する。

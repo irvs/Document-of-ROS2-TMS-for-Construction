@@ -13,9 +13,6 @@ ROS2-TMS for Constructionは九州大学 倉爪研究室で開発が進められ
    :width: 400px
    :align: center  
   
-.. raw:: html
-
-   <br><br>
 
 1. 工事現場の様々な箇所や自律移動建設機械に設置されたセンサからの情報を収集し、データベースに蓄えます。ここで蓄えた情報を環境情報と呼びます (Measure)
 2. 環境情報をもとにサイバー空間上にリアルタイムな工事現場を構築します。その後、サイバー空間上の工事現場を分析し、建設機械が次に取るべき動作の計画を行います (Analyze,Plan)
@@ -40,9 +37,6 @@ ROS2-TMS for Constructionは九州大学 倉爪研究室で開発が進められ
    :width: 400px
    :align: center  
   
-.. raw:: html
-
-   <br><br>
 
 その一方で、自律化施工基盤OPERAのみでは自律化施工を実現することはできません。
 ナビゲーションやアプリケーションというのは目標となる位置姿勢を与えて初めて自律動作するものです。
@@ -54,7 +48,6 @@ ROS2-TMS for Constructionは九州大学 倉爪研究室で開発が進められ
    :width: 600px
    :align: center  
   
-.. raw:: html
 
 アーキテクチャ
 --------------------------------------
@@ -66,9 +59,6 @@ ROS2-TMS for Constructionでは以下に示す通り、各々の機能ごとに�
    :width: 400px
    :align: center  
   
-.. raw:: html
-
-   <br><br>
 
 各々のモジュールの説明は以下に示すとおりです。
 
@@ -102,7 +92,7 @@ ROS2-TMS for Constructionでは以下に示す通り、各々の機能ごとに�
 - **タスク管理機構** : [ :doc:`こちらを参照ください <TaskManagementMechanism>`  ]
   
   タスクスケジューラ（Behavior Tree）を使用し、工事現場の状態を逐次把握しつつ、その時々の現場の状態に合わせて自律移動建設機械を動作させる機能
-- **OperaSim-VR**  [ :doc:`こちらを参照ください <>`  ] 
+- **OperaSim-VR**  [ 作成中  ] 
   
   工事現場から得られる情報をもとにサイバー空間上にリアルタイムな工事現場を構築する機能
 
@@ -161,7 +151,7 @@ ROS2-TMS for Constructionでは以下に示す通り、各々の機能ごとに�
 
 
 4. Takayoshi Hachijo, Yutaro Fukase, Takashi Yokoshima, Yuki Miyashita, Shunsuke Kimura, Masanori Suzuki, Yuichiro Kasahara, Tomoya Kouno, 
-   Koshi Shibata, Ryo Kurazume, Daisuke Endo, Genki Yamauchi, Takeshi Hashimoto, `3D Measurement System for Soil Loading by an Autonomous Backhoe using OPERA <>`_, 42nd International Symposium on Automation and Robotics in Construction (ISARC), 2025
+   Koshi Shibata, Ryo Kurazume, Daisuke Endo, Genki Yamauchi, Takeshi Hashimoto, `3D Measurement System for Soil Loading by an Autonomous Backhoe using OPERA <https://www.iaarc.org/publications/2025_proceedings_of_the_42nd_isarc_montreal_canada/3d_measurement_system_for_soil_loading_by_an_autonomous_backhoe_using_opera.html>`_, 42nd International Symposium on Automation and Robotics in Construction (ISARC), 2025
 
     .. code-block:: bibtex
 
@@ -283,7 +273,6 @@ Contents
 
 .. toctree::
 
-   index
    Install
    TaskManagementMechanism
    DataBase

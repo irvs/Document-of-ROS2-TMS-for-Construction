@@ -29,15 +29,9 @@ subtask_zx200_follow_waypoints_degと機能は同じであるが、姿勢はquat
    :alt: SubtaskZx200FollowWaypoints
    :width: 400px
    :align: center  
-  
-.. raw:: html
-
-.. raw:: html
-
-   <br><br>
 
 パラメータデータの仕様
------------
+--------------------------
 
 各配列の要素番号NはN個目のウェイポイントの値として指定する。
 姿勢はmap座標からみたbase_link座標の相対位置姿勢であり、位置はxyzのm基準、姿勢はquaternionで指定する。
@@ -47,9 +41,6 @@ subtask_zx200_follow_waypoints_degと機能は同じであるが、姿勢はquat
    :width: 400px
    :align: center
 
-.. raw:: html
-
-   <br><br>  
 
 ※_id, model_name. description, record_name等の共通仕様は除外。詳しくは :doc:`こちら <../DataBase>` へ。
 

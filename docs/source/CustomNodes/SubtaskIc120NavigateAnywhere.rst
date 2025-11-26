@@ -37,7 +37,7 @@ subtask_ic120_navigate_anywhere_degと機能は同じであるが、姿勢はqua
    <br><br>
 
 パラメータデータの仕様
------------
+--------------------
 
 Map座標基準での目標位置姿勢を指定する。
 姿勢はmap座標からみたbase_link座標の相対位置姿勢であり、位置はxyzのm基準、姿勢はquaternionで指定する。
